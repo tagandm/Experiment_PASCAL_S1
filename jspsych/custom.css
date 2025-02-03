@@ -1,0 +1,21 @@
+.instructions {
+	max-width: 650px;
+    text-align: justify;
+    font-size: 19px;
+}
+
+.instructions_questionnary {
+    max-width: 800px;
+    text-align: justify;
+    font-size: 19px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bold {
+    font-weight: 550
+}
+
+.stimuli {
+    font-size: 20px;
+}
