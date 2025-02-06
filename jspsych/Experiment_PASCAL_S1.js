@@ -36,21 +36,16 @@ var welcome = {
   "<br>Si vous décidez de participer à l'étude, vous allez compléter des questionnaires sur différents sujets. " +
   "Il est important que vous passiez l'étude en une fois et que vous ne fassiez pas de recherche sur Internet.</p>" +
   "<p class='instructions'>Quels sont les bénéfices d'y participer ?" +
-  "<br>Les participants étudiant à l'université de Fribourg seront compensés avec 30 points d'expérience pour la participation à cette étude.</p>" +
+  "<br>Les participant·es étudiant à l'université de Fribourg seront compensé·es avec 30 points d'expérience pour la participation à cette étude.</p>" +
   "<p class='instructions'>Quels sont les risques d'y participer ?" +
   "<br>Il n'y a pas de risques directs. Votre participation implique un investissement de XX minutes de votre temps.</p>" +
   "<p class='instructions'>Vos droits si vous participez à l'étude :" +
   "<br> Vous êtes libre d'accepter ou de refuser de participer à l'étude. Si vous décidez de ne pas y prendre part, cela n'aura aucune conséquence. " +
   "De plus, vous pouvez décider de vous retirer à n'importe quel moment.</p>" +
   "<p class='instructions'>Ce qu'il adviendra de vos données :" +
-  "<br>Toutes les données obtenues durant l'expérience seront strictement confidentielles. Vous serez identifié-e uniquement par un numéro attribué de manière aléatoire. " +
+  "<br>Toutes les données obtenues durant l'expérience seront strictement confidentielles. Vous serez identifié·e uniquement par un numéro attribué de manière aléatoire. " +
   "Votre nom, ou toutes autres données vous identifiant n'apparaîtront dans aucunes des publications ou des présentations qui résulteront de cette étude. " +
   "Aucune information ne permettra de relier vos réponses au questionnaire à votre identité.</p>" +
-  "<p class='instructions'>La personne à qui vous pouvez vous adresser :" +
-  "<br>Vous pouvez à tout moment poser des questions et demander des précisions aux personnes suivantes :" +
-  "<br>Ana Rita Fangueiro Pires (ana.fangueiropires@unifr.ch)" +
-  "<br>Pascal Wagner-Egger (pascal.wagner@unifr.ch)" +
-  "<br>Département de psychologie, Université de Fribourg</p>" +
   "<p class='instructions'>En cliquant sur \u0022Continuer\u0022, vous acceptez de prendre part à ce questionnaire de façon volontaire " +
   "et déclarez avoir été informé·e des objectifs et du déroulement du questionnaire ainsi que des effets présumés, des avantages et des inconvénients.</p>",
   choices: ['Continuer']
@@ -60,7 +55,7 @@ var welcome = {
 var scenario_instruction = {
   type: jsPsychHtmlButtonResponse,
   stimulus:
-  "<p class= 'instructions_questionnary'>Dans cette première partie, vous allez lire de courtes descriptions d'événements. " +
+  "<p class= 'instructions_questionnaire'>Dans cette partie, vous allez lire de courtes descriptions d'événements. " +
   "Pour chacun de ces événements, nous vous demander de juger si, selon vous, ces événements ont bel et bien eu lieu.",
   choices: ['Continuer']
 };
@@ -416,8 +411,8 @@ var attention_check = {
   type: jsPsychSurveyText,
   questions: [
     {
-      prompt: "<p class='instructions_questionnary'>Quand nous allons vous demandez d'indiquer votre couleur préférée, veuillez s'il vous plait écrire le mot \u0022baguette\u0022.</p>" +
-              "<p class='instructions_questionnary'>En vous basant sur le texte ci-dessus, veuillez indiquer votre couleur préférée ?</p>",
+      prompt: "<p class='instructions_questionnaire'>Quand nous allons vous demandez d'indiquer votre couleur préférée, veuillez s'il vous plait écrire le mot \u0022baguette\u0022.</p>" +
+              "<p class='instructions_questionnaire'>En vous basant sur le texte ci-dessus, veuillez indiquer votre couleur préférée ?</p>",
       name: 'attention_check',
       required: true
     }
@@ -426,9 +421,9 @@ var attention_check = {
 }
 
 //Survey
-var instruction_questionnary = {
+var instruction_questionnaires = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: "<p class='instructions_questionnary'>La tâche est maintenant terminée. Nous allons à présent vous poser quelques questions sur vous, ainsi que votre vision du monde.</p>" ,
+  stimulus: "<p class='instructions_questionnaire'>Dans cette partie, vous allez résoudre des problèmes et répondre à des questions sur votre vision du monde.</p>" ,
   choices: ['Continuer']
 }
 
@@ -436,37 +431,38 @@ var instruction_questionnary = {
 var crt_item = [
   {name: 'crt_1',
    item: "Une batte de baseball et une balle coûtent 110 € au total. La batte coûte 100 € de plus que la balle. Combien coûte la balle ?",
-   correct_answer: "XX"},
+   correct_answer: "5"},
   {name: 'crt_2',
    item: "Si 5 machines prennent 5 minutes pour faire 5 boulons, combien faudrait-il de temps à 100 machines pour faire 100 boulons ?",
-   correct_answer: "XX"},
+   correct_answer: "5"},
   {name: 'crt_3',
    item: "Dans un étang, il y a un banc de nénuphars. Chaque jour, le banc double de taille. S'il faut 48 jours au banc de nénuphars pour couvrir l'étang, combien lui faut-il de jours pour couvrir la moitié de l'étang ?",
-   correct_answer: "XX"},
+   correct_answer: "47"},
   {name: 'crt_4',
-   item: "Si trois elfes peuvent emballer trois jouets en une heure, combien d’elfes faut-il pour emballer six jouets en 2 heures ?",
-   correct_answer: "XX"},
+   item: "Si trois elfes peuvent emballer trois jouets en une heure, combien d'elfes faut-il pour emballer six jouets en 2 heures ?",
+   correct_answer: "3"},
   {name: 'crt_5',
-   item: "La note reçue par Jérôme est à la fois la 15e plus haute et la 15eplus basse de sa classe. Combien d’élèves y a-t-il dans cette classe ?",
-   correct_answer: "XX"},
+   item: "La note reçue par Jérôme est à la fois la 15e plus haute et la 15e plus basse de sa classe. Combien d'élèves y a-t-il dans cette classe ?",
+   correct_answer: "29"},
   {name: 'crt_6',
    item: "Dans ce club sportif, les grands ont trois fois plus de chances de gagner une médaille que les petits. Cette année, le club a remporté 60 médailles. Combien de ces médailles ont-elles été gagnées par des petits ?",
-   correct_answer: "XX"}
+   correct_answer: "15"}
   ];
   
   var crt_question = {
   type: jsPsychSurveyText,
+  preamble: `Veuillez résoudre le problème ci-dessous:<br>`,
   questions: [
     {
       prompt: function(){
         return "<p class='instructions'>"+jsPsych.timelineVariable ('item')+"</p>"},
       name: function(){
         return jsPsych.timelineVariable ('name')},
-      required: true
+      required: true,
     }
-  ],
-  }
-  
+  ]
+}
+
   var crt_procedure = {
   timeline: [crt_question],
   timeline_variables: crt_item,
@@ -477,7 +473,7 @@ var crt_item = [
   }
 };
 
-///Questionnary
+///questionnaire
 var labels = [
   "<br>Pas du tout d'accord", 
   "<br>Pas d'accord",
@@ -487,12 +483,12 @@ var labels = [
   ];
 
 
-///CMQ Questionnary 
-var cmq_questionnary = {
+///CMQ questionnaire 
+var cmq_questionnaire = {
   type: jsPsychSurveyLikert,
   preamble:
-  "<p class='instructions_questionnary'>Pour chacune de ces affirmations, veuillez indiquez dans quelle mesure vous êtes en accord avec.</p>"+ 
-  "<p class='instructions_questionnary'>Il n'y a pas de bonne réponse, nous sommes intéressés par vos opinions personnelles.</p>",
+  "<p class='instructions_questionnaire'>Pour chacune de ces affirmations, veuillez indiquez dans quelle mesure vous êtes en accord avec.</p>"+ 
+  "<p class='instructions_questionnaire'>Il n'y a pas de bonne réponse, nous sommes intéressés par vos opinions personnelles.</p>",
   questions: [
        {prompt: "Beaucoup de choses très importantes se produisent dans le monde dont le grand public n'est pas informé.", name: 'cmq_1', labels: labels, required: true},
        {prompt: "Les politiciens ne nous disent généralement pas ce qui motive réellement leurs décisions.", name: 'cmq_2', labels: labels, required: true},
@@ -504,12 +500,12 @@ var cmq_questionnary = {
   button_label: 'Continuer'
 }
 
-///Modified CMQ Questionnary
-var mcmq_questionnary = {
+///Modified CMQ questionnaire
+var mcmq_questionnaire = {
   type: jsPsychSurveyLikert,
   preamble:
-  "<p class='instructions_questionnary'>Pour chacune de ces affirmations, veuillez indiquez dans quelle mesure vous êtes en accord avec."+ 
-  "<p class='instructions_questionnary'>Il n'y a pas de bonne réponse, nous sommes intéressés par vos opinions personnelles.</p>",
+  "<p class='instructions_questionnaire'>Pour chacune de ces affirmations, veuillez indiquez dans quelle mesure vous êtes en accord avec."+ 
+  "<p class='instructions_questionnaire'>Il n'y a pas de bonne réponse, nous sommes intéressés par vos opinions personnelles.</p>",
   questions: [
        {prompt: "Certaines choses importantes dont le grand public n'est pas informé se produisent parfois dans le monde.", name: 'mcmq_1', labels: labels, required: true},
        {prompt: "Les politiciens ne nous disent parfois pas ce qui motive réellement leurs décisions.", name: 'mcmq_2', labels: labels, required: true},
@@ -526,51 +522,41 @@ cmq_or_mcmq_randomization = jsPsych.randomization.sampleWithoutReplacement(["cmq
 var cmq_or_mcmq = {
   timeline: (function(){
     if (cmq_or_mcmq_randomization == "cmq"){
-      return [cmq_questionnary]
+      return [cmq_questionnaire]
     } else {
-      return [mcmq_questionnary]
+      return [mcmq_questionnaire]
     }
   })()
 }
 
-//Officialism Questionnary
-var officialism_questionnary = {
+//Officialism questionnaire
+var officialism_questionnaire = {
   type: jsPsychSurveyLikert,
   preamble:
-  "<p class='instructions_questionnary'>Pour chacune de ces affirmations, veuillez indiquez dans quelle mesure vous êtes en accord avec.</p>"+ 
-  "<p class='instructions_questionnary'>Il n'y a pas de bonne réponse, nous sommes intéressés par vos opinions personnelles.</p>",
+  "<p class='instructions_questionnaire'>Pour chacune de ces affirmations, veuillez indiquez dans quelle mesure vous êtes en accord avec.</p>"+ 
+  "<p class='instructions_questionnaire'>Il n'y a pas de bonne réponse, nous sommes intéressés par vos opinions personnelles.</p>",
   questions: [
-       {prompt: "On ne peut jamais faire confiance aux autorités.", name: 'off_1', labels: labels, required: true},
-       {prompt: "Les autorités de santé sont indépendantes des lobbys pharmaceutiques.", name: 'off_2', labels: labels, required: true},
-       {prompt: "Les scientifiques ont toujours des conflits d'intérêts cachés.", name: 'off_3', labels: labels, required: true},
-       {prompt: "Les experts sont rarement biaisés.", name: 'off_4', labels: labels, required: true},
-       {prompt: "L'avis des experts est souvent complètement faux.", name: 'off_5', labels: labels, required: true},
-       {prompt: "Les autorités contrôlent les médias officiels.", name: 'off_6', labels: labels, required: true},
-       {prompt: "Les autorités manipulent les informations qu'elles donnent au grand public.", name: 'off_7', labels: labels, required: true},
-       {prompt: "Les autorités cachent très peu de secrets au public.", name: 'off_8', labels: labels, required: true},
-       {prompt: "Les médias traditionnels sont très peu fiables.", name: 'off_9', labels: labels, required: true},
-       {prompt: "Les médias traditionnels admettent et signalent toujours quand ils font des erreurs.", name: 'off_10', labels: labels, required: true},
-       {prompt: "Les médias officiels cachent très souvent la vérité.", name: 'off_11', labels: labels, required: true},
-       {prompt: "Les institutions gouvernementales (police, services secrets, justice) investiguent correctement les évenements majeurs (p.ex. attentats, accidents).", name: 'off_12', labels: labels, required: true},
-       {prompt: "Les institutions gouvernementales (police, services secrets, justice) ne sont jamais transparentes dans leur investigations d'évenements majeurs (p.ex. attentats, accidents).", name: 'off_13', labels: labels, required: true},
-       {prompt: "Les personnes au pouvoir sont dignes de confiance.", name: 'off_14', labels: labels, required: true},
-       {prompt: "Les personnes au pouvoir cherchent à cacher la vérité.", name: 'off_15', labels: labels, required: true},
-       {prompt: "Les personnes au pouvoir ont comme but de servir le bien commun.", name: 'off_16', labels: labels, required: true},
-       {prompt: "Les institutions gouvernementales agissent de manière éthique.", name: 'off_17', labels: labels, required: true},
-       {prompt: "Les lobbys ont très peu de pouvoir en démocratie.", name: 'off_18', labels: labels, required: true},
-       {prompt: "Les élections démocratiques sont généralement menées correctement.", name: 'off_19', labels: labels, required: true},
-       {prompt: "Il y a des erreurs dans les votations et les élections.", name: 'off_20', labels: labels, required: true},
-  ],
+       {prompt: "Les personnes au pouvoir ont comme but de servir le bien commun.", name: 'off_1', labels: labels, required: true},
+       {prompt: "Les institutions gouvernementales agissent de manière éthique.", name: 'off_2', labels: labels, required: true},
+       {prompt: "Les autorités cachent très peu de secrets au public.", name: 'off_3', labels: labels, required: true},
+       {prompt: "Les personnes au pouvoir sont dignes de confiance.", name: 'off_4', labels: labels, required: true},
+       {prompt: "Les lobbys ont très peu de pouvoir en démocratie.", name: 'off_5', labels: labels, required: true},
+       {prompt: "Les autorités de santé sont indépendantes des lobbys pharmaceutiques.", name: 'off_6', labels: labels, required: true},
+       {prompt: "Les experts sont rarement biaisés.", name: 'off_7', labels: labels, required: true},
+       {prompt: "Les médias traditionnels admettent et signalent toujours quand ils font des erreurs.", name: 'off_8', labels: labels, required: true},
+       {prompt: "Les élections démocratiques sont toujours menées correctement.", name: 'off_9', labels: labels, required: true},
+       {prompt: "Les institutions gouvernementales (police, services secrets, justice) investiguent correctement les évenements majeurs (p. ex. attentats, accidents).", name: 'off_10', labels: labels, required: true},
+      ],
   required_error: "Veuillez répondre à toutes les questions.",
   button_label: 'Continuer'
 }  
 
-//Healthy Scepticism Questionnary
-var hs_questionnary = {
+//Healthy Scepticism questionnaire
+var hs_questionnaire = {
   type: jsPsychSurveyLikert,
   preamble:
-  "<p class='instructions_questionnary'>Pour chacune de ces affirmations, veuillez indiquez dans quelle mesure vous êtes en accord avec.</p>"+ 
-  "<p class='instructions_questionnary'>Il n'y a pas de bonne réponse, nous sommes intéressés par vos opinions personnelles.</p>",
+  "<p class='instructions_questionnaire'>Pour chacune de ces affirmations, veuillez indiquez dans quelle mesure vous êtes en accord avec.</p>"+ 
+  "<p class='instructions_questionnaire'>Il n'y a pas de bonne réponse, nous sommes intéressés par vos opinions personnelles.</p>",
   questions: [
        {prompt: "Il y a des gens qui ne veulent pas que la vérité éclate au grand jour.", name: 'hs_1', labels: labels, required: true},
        {prompt: "Certaines choses ne sont pas ce qu'elles semblent être.", name: 'hs_2', labels: labels, required: true},
@@ -580,12 +566,12 @@ var hs_questionnary = {
   button_label: 'Continuer'
 }
 
-//Conspiracy Ideation Questionnary
-var ci_questionnary = {
+//Conspiracy Ideation questionnaire
+var ci_questionnaire = {
   type: jsPsychSurveyLikert,
   preamble:
-  "<p class='instructions_questionnary'>Pour chacune de ces affirmations, veuillez indiquez dans quelle mesure vous êtes en accord avec.</p>"+ 
-  "<p class='instructions_questionnary'>Il n'y a pas de bonne réponse, nous sommes intéressés par vos opinions personnelles.</p>",
+  "<p class='instructions_questionnaire'>Pour chacune de ces affirmations, veuillez indiquez dans quelle mesure vous êtes en accord avec.</p>"+ 
+  "<p class='instructions_questionnaire'>Il n'y a pas de bonne réponse, nous sommes intéressés par vos opinions personnelles.</p>",
   questions: [
        {prompt: "La vérité n'est connue que par un groupe secret puissant qui dissémine activement des fausses informations ou trompe le public.", name: 'ci_1', labels: labels, required: true},
        {prompt: "Un petit groupe de personnes influencent les événements du monde et tentent de le cacher.", name: 'ci_2', labels: labels, required: true},
@@ -595,11 +581,37 @@ var ci_questionnary = {
   button_label: 'Continuer'
 }
 
+///Randomization questionnaire
+var questionnaire = [crt_procedure, cmq_or_mcmq, officialism_questionnaire, hs_questionnaire, ci_questionnaire, attention_check]
+
+var questionnaires_randomization = jsPsych.randomization.sampleWithoutReplacement(questionnaire);
+
+var task_or_questionnaires_first_randomization = jsPsych.randomization.sampleWithoutReplacement(["task", "questionnaires"], 1)[0];
+
+var measures = {
+  timeline: (function(){
+    if (task_or_questionnaires_first_randomization == "task"){
+      return [
+        scenario_instruction,
+        scenario_procedure,
+        instruction_questionnaires,
+        ...questionnaires_randomization]
+    } else {
+      return [
+        instruction_questionnaires,
+        ...questionnaires_randomization,
+        scenario_instruction,
+        scenario_procedure
+      ]
+    }
+  })()
+}
+
 /// Demographic Questions
-var instruction_demographic_questionnary = {
+var instruction_demographic_questionnaire = {
   type: jsPsychHtmlButtonResponse,
   stimulus:
-  "<p class='instructions_questionnary'>Vous avez presque fini l'étude. Veuillez répondre à ces dernières questions.</p>",
+  "<p class='instructions_questionnaire'>Vous avez presque fini l'étude. Veuillez répondre à ces dernières questions.</p>",
   choices: ['Continuer']
 }
           
@@ -607,7 +619,7 @@ var gender = {
   type: jsPsychSurveyMultiSelect,
   questions: [
     {
-      prompt: "<p class='instructions_questionnary'>Vous vous identifiez en tant que...</p>", 
+      prompt: "<p class='instructions_questionnaire'>Vous vous identifiez en tant que...</p>", 
       options: ["Femme", "Homme", "Autre"],
       name: 'gender',
       required: true,
@@ -622,7 +634,7 @@ var age = {
   type: jsPsychSurveyText,
   questions: [
     {
-      prompt: "<p class='instructions_questionnary'>Quel âge avez-vous ? (en année, par exemple 32)</p>",
+      prompt: "<p class='instructions_questionnaire'>Quel âge avez-vous ? (en année, par exemple 32)</p>",
       placeholder: 'XX',
       name: 'age',
       required: true
@@ -636,7 +648,7 @@ var degree = {
   type: jsPsychSurveyMultiSelect,
   questions: [
     {
-      prompt: "<p class='instructions_questionnary'>Quel est votre plus haut niveau de scolarité complètement achevé ?</p>", 
+      prompt: "<p class='instructions_questionnaire'>Quel est votre plus haut niveau de scolarité complètement achevé ?</p>", 
       options: ["Aucun diplôme",
          "CFC ou autre diplôme inférieur à la maturité/baccalauréat",
          "École de commerce, école de culture générale ou baccalauréat professionnel",
@@ -657,8 +669,8 @@ var search_check = {
   type: jsPsychSurveyMultiSelect,
   questions: [
     {
-      prompt: "<p class='instructions_questionnary'>Avez-vous effectué des recherches sur internet pendant la tâche ?</p>" +
-      "<p class='instructions_questionnary'>Veuillez répondre honnêtement à cette question, nous vous assurons que votre réponse n'aura pas d'impact sur votre crédit.</p>", 
+      prompt: "<p class='instructions_questionnaire'>Avez-vous effectué des recherches sur internet pendant la tâche ?</p>" +
+      "<p class='instructions_questionnaire'>Veuillez répondre honnêtement à cette question, nous vous assurons que votre réponse n'aura pas d'impact sur votre crédit.</p>", 
       options: ["oui", "non"],
       name: 'research_check',
       required: true,
@@ -695,7 +707,11 @@ var thanks = {
   type: jsPsychHtmlButtonResponse,
   stimulus:
   "<p class='instructions'>Vos données ont bien été enregistrées. " +
-  "Merci beaucoup pour votre participation!",
+  "Merci beaucoup pour votre participation!"+
+  "<p class='instructions'>Si vous souhaitez poser des questions ou demander des précision, vous pouvez à tout moment contacter les personnes suivantes:" +
+  "<br>Ana Rita Fangueiro Pires (ana.fangueiropires@unifr.ch)" +
+  "<br>Pascal Wagner-Egger (pascal.wagner@unifr.ch)" +
+  "<br>Département de psychologie, Université de Fribourg</p>",
   choices: ['Continuer']
 }
           
@@ -707,7 +723,8 @@ const experiment_id = "XXX"; //To complete
 jsPsych.data.addProperties({
   subject_id: subject_id,
   cmq_or_mcmq: cmq_or_mcmq,
-  true_side: true_side
+  true_side: true_side,
+  questionnaires_randomization: questionnaires_randomization,
 })
 
 var save_data = {
@@ -722,16 +739,8 @@ var save_data = {
 timeline.push 
   (browser_check,
   welcome,
-  scenario_instruction,
-  scenario_procedure,
-  instruction_questionnary,
-  attention_check,
-  crt_procedure,
-  cmq_or_mcmq,
-  officialism_questionnary,
-  hs_questionnary,
-  ci_questionnary,
-  instruction_demographic_questionnary,
+  measures,
+  instruction_demographic_questionnaire,
   gender,
   age,
   degree,
