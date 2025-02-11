@@ -34,7 +34,7 @@ var welcome = {
   "Veuillez s'il vous plaît lire la présentation de l'étude ainsi que les risques et bénéfices qu'elle peut présenter avant de décider d'y participer.</p>" +
   "<p class='instructions'>Qu'est-ce que nous vous demandons de faire ?" +
   "<br>Si vous décidez de participer à l'étude, vous allez compléter des questionnaires sur différents sujets. " +
-  "Il est important que vous passiez l'étude en une fois et que vous ne fassiez pas de recherche sur Internet.</p>" +
+  "Il est important que vous passiez l'étude en une fois et que vous ne fassiez pas de recherches sur Internet.</p>" +
   "<p class='instructions'>Quels sont les bénéfices d'y participer ?" +
   "<br>Les participant·es étudiant à l'université de Fribourg seront compensé·es avec 30 points d'expérience pour la participation à cette étude.</p>" +
   "<p class='instructions'>Quels sont les risques d'y participer ?" +
@@ -616,7 +616,7 @@ var instruction_demographic_questionnaire = {
 }
           
 var gender = {
-  type: jsPsychSurveyMultiSelect,
+  type: jsPsychSurveyMultiChoice,
   questions: [
     {
       prompt: "<p class='instructions_questionnaire'>Vous vous identifiez en tant que...</p>", 
@@ -645,7 +645,7 @@ var age = {
 }
 
 var degree = {
-  type: jsPsychSurveyMultiSelect,
+  type: jsPsychSurveyMultiChoice,
   questions: [
     {
       prompt: "<p class='instructions_questionnaire'>Quel est votre plus haut niveau de scolarité complètement achevé ?</p>", 
